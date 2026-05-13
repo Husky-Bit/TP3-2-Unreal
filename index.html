@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajo Práctico 3 Unreal Blueprints</title>
+  <meta name="description" content="Trabajo Práctico Unreal Engine - Blueprints 2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- BANNER SUPERIOR 
+         Reemplazar img/logo-izq.png y img/logo-der.png
+         con logos en la carpeta img/
+  -->
+  <header class="banner">
+    <div class="banner__inner">
+
+      <div class="banner__logo-slot">
+        <img
+          src="img/logo-izq.png"
+          alt="Logo institución"
+          class="banner__logo"
+          onerror="this.parentElement.querySelector('.banner__logo-fallback').style.display='flex'; this.style.display='none'"
+        />
+        <div class="banner__logo-fallback">LOGO</div>
+      </div>
+
+      <div class="banner__center">
+        <p class="banner__institution">       </p>
+        <h1 class="banner__title">         </h1>
+        <p class="banner__meta"> <!-- Año 2025 &nbsp;·&nbsp; Turno Noche &nbsp;·&nbsp; Prof. Gonzalo Agüero--> </p>
+      </div>
+
+      <div class="banner__logo-slot banner__logo-slot--right">
+        <img
+          src="img/logo-der.png"
+          alt="Logo secundario"
+          class="banner__logo"
+          onerror="this.parentElement.querySelector('.banner__logo-fallback').style.display='flex'; this.style.display='none'"
+        />
+        <div class="banner__logo-fallback">LOGO</div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- TÍTULO DEL TRABAJO -->
+  <div class="work-title-bar">
+    <div class="work-title-bar__inner">
+      <span class="work-title-bar__label">Trabajo Práctico Nº 3</span>
+      <h2 class="work-title-bar__name">Programación visual con Blueprints 2</h2>
+    </div>
+  </div>
+
+  <!-- ÍNDICE DE EJERCICIOS -->
+  <nav class="exercise-index">
+    <div class="exercise-index__inner">
+      <span class="exercise-index__label">Ir a:</span>
+      <a href="#ejercicio-01" class="exercise-index__link">Ejercicio 01</a>
+      <a href="#ejercicio-02" class="exercise-index__link">Ejercicio 02</a>
+      <!-- Agregar más links aca al sumar ejercicios -->
+      <a href="#ejercicio-03" class="exercise-index__link">Ejercicio 03</a>
+      <a href="#ejercicio-04" class="exercise-index__link">Ejercicio 04</a>
+      <a href="#ejercicio-05" class="exercise-index__link">Ejercicio 05</a>
+    </div>
+  </nav>
+
+  <!-- LISTA DE EJERCICIOS -->
+  <main class="exercises-wrapper">
+
+
+    <!-- ══════════════════════════════════════════════════
+         EJERCICIO 01
+         ─────────────────────────────────────────────────
+         IMÁGENES:
+           img/ejercicio-01/resultado.png   → captura del log/pantalla
+           img/ejercicio-01/detalle.png     → imagen dentro del procedimiento
+           img/ejercicio-01/blueprint.png   → gráfica blueprint completa
+         Si alguna imagen no existe, se muestra un placeholder gris.
+    ══════════════════════════════════════════════════ -->
+    <section class="exercise" id="ejercicio-01">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 01</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Un guardia permite el acceso al pueblo solo si el viajero tiene al menos 10 monedas de peaje. Usar un comparador numérico y un Branch para imprimir si puede entrar o es rechazado
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                ===== CONTROL DE ACCESO AL PUEBLO =====<br>
+                Lo siento Kael, necesitás al menos 10 monedas. Tenés: 7
+              </p>
+              <!-- 
+              <div class="img-frame">
+                <img
+                  src="img/ejercicio-01/resultado.png"
+                  alt="Resultado Ejercicio 01"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-01/resultado.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+              -->
+              
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+            
+              <ol class="procedure-list">
+                <li>Crear variable <strong>Monedas</strong> (Integer) con valor default <code>7</code>.</li>
+                <li>Crear variable <strong>NombreViajero</strong> (String) con valor default <code>"Kael"</code>.</li>
+                <li>
+                  En el <em>Event Graph</em>, conectar <em>Event BeginPlay</em> a un nodo
+                  <strong>Print String</strong> con el mensaje
+                  <em>"===== CONTROL DE ACCESO AL PUEBLO ====="</em>.
+                </li>
+                <li>
+                  Conectar el <strong>Print String</strong> a un nodo <strong>Branch</strong>.
+                  Armar la condición <code>Monedas &gt;= 10</code>:
+                  <ul>
+                    <li>Arrastrar <strong>GET Monedas</strong> y conectarlo a un nodo <strong>&gt;= (Integer)</strong> con valor
+                      <code>10</code>.</li>
+                    <li>Conectar la salida Boolean del <strong>&gt;=</strong> al pin <em>Condition</em> del <strong>Branch</strong>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Desde el nodo <strong>Branch</strong>:
+                  <ul>
+                    <li>
+                      <strong>TRUE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
+                      <em>"Bienvenido " + NombreViajero + "! Podés entrar al pueblo."</em>
+                      en color <strong>verde</strong>.
+                    </li>
+                    <li>
+                      <strong>FALSE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
+                      <em>"Lo siento " + NombreViajero + ", necesitás al menos 10 monedas. Tenés: " + Monedas</em>
+                      en color <strong>rojo</strong>.
+                    </li>
+                  </ul>
+                </li>
+                <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
+              </ol>
+              <!--
+                  Imagen de detalle dentro del procedimiento
+              <div class="img-frame img-frame--inline">
+                <img
+                  src="img/ejercicio-01/detalle.png"
+                  alt="Detalle Ejercicio 01"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-01/detalle.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+              -->
+              
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img
+                  src="img/ejercicio-01/blueprint.png"
+                  alt="Blueprint Ejercicio 01"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-01/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 01  ══════ -->
+
+
+    <!-- ══════════════════════════════════════════════════
+         EJERCICIO 02
+         ─────────────────────────────────────────────────
+         IMÁGENES:
+           img/ejercicio-02/resultado.png
+           img/ejercicio-02/detalle.png
+           img/ejercicio-02/blueprint.png
+    ══════════════════════════════════════════════════ -->
+    <section class="exercise" id="ejercicio-02">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 02</h3>
+      </div>
+
+      <div class="exercise__row">
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Un cofre solo se abre si el jugador tiene la llave correcta Y no está maldito. Usar dos variables booleanas combinadas con AND para determinar si el cofre se abre o permanece cerrado.</p>
+            </div>
+          </div>
+        </div>
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                ===== INTENTO DE APERTURA DEL COFRE =====<br>
+                ¡El cofre se abre! Aragorn encontró el tesoro.
+              </p>
+              <!-- 
+              <div class="img-frame">
+                <img
+                  src="img/ejercicio-02/resultado.png"
+                  alt="Resultado Ejercicio 02"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-02/resultado.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+              -->
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercise__row">
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+            
+              <ol class="procedure-list">
+                <li>Crear variable <strong>TieneLlave</strong> (Boolean) con valor default <code>true</code>.</li>
+                <li>Crear variable <strong>EstaMaldito</strong> (Boolean) con valor default <code>false</code>.</li>
+                <li>Crear variable <strong>NombreJugador</strong> (String) con valor default <code>"Aragorn"</code>.</li>
+                <li>
+                  En el <em>Event Graph</em>, conectar <em>Event BeginPlay</em> a un nodo
+                  <strong>Print String</strong> con el mensaje
+                  <em>"===== INTENTO DE APERTURA DEL COFRE ====="</em>.
+                </li>
+                <li>
+                  Conectar el <strong>Print String</strong> a un nodo <strong>Branch</strong>.
+                  Armar la condición <code>TieneLlave AND NOT EstaMaldito</code>:
+                  <ul>
+                    <li>Arrastrar <strong>GET TieneLlave</strong> al pin <em>A</em> de un nodo <strong>AND</strong>.</li>
+                    <li>Arrastrar <strong>GET EstaMaldito</strong> a un nodo <strong>NOT</strong> y conectar su salida al pin
+                      <em>B</em> del mismo <strong>AND</strong>.</li>
+                    <li>Conectar la salida del <strong>AND</strong> al pin <em>Condition</em> del <strong>Branch</strong>.</li>
+                  </ul>
+                </li>
+                <li>
+                  Desde el nodo <strong>Branch</strong> principal:
+                  <ul>
+                    <li>
+                      <strong>TRUE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
+                      <em>"¡El cofre se abre! " + NombreJugador + " encontró el tesoro."</em>
+                      en color <strong>amarillo</strong>.
+                    </li>
+                    <li>
+                      <strong>FALSE</strong> → conectar a un segundo nodo <strong>Branch</strong>
+                      con condición <code>NOT TieneLlave</code>:
+                      <ul>
+                        <li><strong>GET TieneLlave</strong> → nodo <strong>NOT</strong> → pin <em>Condition</em> del segundo
+                          <strong>Branch</strong>.</li>
+                        <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"No tenés la llave. El cofre permanece
+                            cerrado."</em> en color <strong>rojo</strong>.</li>
+                        <li><strong>FALSE</strong> → <strong>Print String</strong>: <em>"Estás maldito. No podés abrir el
+                            cofre."</em> en color <strong>rojo oscuro</strong>.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
+              </ol>
+              <div class="img-frame img-frame--inline">
+                <img
+                  src="img/ejercicio-02/detalle.png"
+                  alt="Detalle Ejercicio 02"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-02/detalle.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img
+                  src="img/ejercicio-02/blueprint.png"
+                  alt="Blueprint Ejercicio 02"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-02/blueprint.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 02  ══════ -->
+
+    <section class="exercise" id="ejercicio-03">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 03</h3>
+      </div>
+
+      <div class="exercise__row">
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Un troll bloquea un puente y solo deja pasar a quien sea un guerrero de alto nivel, O tenga un Pase real, pero NUNCA a alguien que esté maldito, sin importar las otras condiciones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                ===== EL PUENTE DEL TROLL =====<br>
+                El troll gruñe... pero deja pasar a Finn. Su nivel de 75 impone respeto.
+              </p>
+              <!--
+              <div class="img-frame">
+                <img
+                  src="img/ejercicio-03/resultado.png"
+                  alt="Resultado Ejercicio 03"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-03/resultado.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+              -->
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercise__row">
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+            
+              <ol class="procedure-list">
+                <li>Crear variable <strong>NombreViajero</strong> (String) con valor default <code>"Finn"</code>.</li>
+                <li>Crear variable <strong>Nivel</strong> (Integer) con valor default <code>75</code>.</li>
+                <li>Crear variable <strong>TienePase</strong> (Boolean) con valor default <code>false</code>.</li>
+                <li>Crear variable <strong>EstaMaldito</strong> (Boolean) con valor default <code>false</code>.</li>
+                <li>
+                  En el <em>Event Graph</em>, conectar <em>Event BeginPlay</em> a un nodo
+                  <strong>Print String</strong> con el mensaje <em>"===== EL PUENTE DEL TROLL ====="</em>.
+                </li>
+                <li>
+                  Conectar el <strong>Print String</strong> a un primer nodo <strong>Branch</strong>
+                  con condición <code>NOT EstaMaldito</code>:
+                  <ul>
+                    <li>Arrastrar <strong>GET EstaMaldito</strong> a un nodo <strong>NOT</strong> y conectar su salida al pin
+                      <em>Condition</em>.</li>
+                    <li>
+                      <strong>FALSE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
+                      <em>"¡Atrás, " + NombreViajero + "! El troll huele la maldición. Nadie maldito cruza este puente."</em>
+                      en color <strong>rojo</strong>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  De la rama <strong>TRUE</strong> del primer <strong>Branch</strong>, conectar un segundo
+                  <strong>Branch</strong> con condición <code>Nivel &gt;= 70 OR TienePase</code>:
+                  <ul>
+                    <li>Arrastrar <strong>GET Nivel</strong> a un nodo <strong>&gt;= (Integer)</strong> con valor <code>70</code> →
+                      pin <em>A</em> de un nodo <strong>OR</strong>.</li>
+                    <li>Arrastrar <strong>GET TienePase</strong> → pin <em>B</em> del mismo <strong>OR</strong>.</li>
+                    <li>Conectar la salida del <strong>OR</strong> al pin <em>Condition</em> del segundo <strong>Branch</strong>.
+                    </li>
+                    <li>
+                      <strong>FALSE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
+                      <em>"¡ALTO, " + NombreViajero + "! Necesitás ser nivel 70 o tener un Pase real."</em>
+                      en color <strong>naranja</strong>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  De la rama <strong>TRUE</strong> del segundo <strong>Branch</strong>, conectar un tercer
+                  <strong>Branch</strong> con condición <code>Nivel &gt;= 70</code> para personalizar el mensaje:
+                  <ul>
+                    <li>
+                      <strong>TRUE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
+                      <em>"El troll gruñe... pero deja pasar a " + NombreViajero + ". Su nivel de " + Nivel + " impone
+                        respeto."</em>
+                      en color <strong>verde</strong>.
+                    </li>
+                    <li>
+                      <strong>FALSE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
+                      <em>"El troll examina el Pase de " + NombreViajero + " y se hace a un lado a regañadientes."</em>
+                      en color <strong>verde</strong>.
+                    </li>
+                  </ul>
+                </li>
+                <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
+              </ol>
+              <div class="img-frame img-frame--inline">
+                <img
+                  src="img/ejercicio-03/detalle.png"
+                  alt="Detalle Ejercicio 03"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-03/detalle.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img
+                  src="img/ejercicio-03/blueprint.png"
+                  alt="Blueprint Ejercicio 03"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-03/blueprint.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 03  ══════ -->
+    
+    <section class="exercise" id="ejercicio-04">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 04</h3>
+      </div>
+
+      <div class="exercise__row">
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Simular una tienda que ofrece distintos descuentos según la combinación de condiciones del cliente: si es miembro del gremio, si su nivel supera cierto rango, y si tiene reputación suficiente. Cada combinación da un resultado distinto.</p>
+            </div>
+          </div>
+        </div>
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                ===== TIENDA DEL ALQUIMISTA =====<br>
+                Cliente: Mira<br>
+                ¡Descuento del 50%! Sos miembro del gremio, nivel alto y gran reputación.
+              </p>
+              <!--
+              <div class="img-frame">
+                <img
+                  src="img/ejercicio-04/resultado.png"
+                  alt="Resultado Ejercicio 04"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-04/resultado.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+              -->
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercise__row">
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+            
+              <ol class="procedure-list">
+                <li>Crear variable <strong>NombreCliente</strong> (String) con valor default <code>"Mira"</code>.</li>
+                <li>Crear variable <strong>EsMiembroGremio</strong> (Boolean) con valor default <code>true</code>.</li>
+                <li>Crear variable <strong>Nivel</strong> (Integer) con valor default <code>55</code>.</li>
+                <li>Crear variable <strong>Reputacion</strong> (Integer) con valor default <code>80</code>.</li>
+                <li>
+                  En el <em>Event Graph</em>, conectar <em>Event BeginPlay</em> a dos nodos
+                  <strong>Print String</strong> encadenados:
+                  <ul>
+                    <li><em>"===== TIENDA DEL ALQUIMISTA ====="</em></li>
+                    <li><em>"Cliente: " + NombreCliente</em>.</li>
+                  </ul>
+                </li>
+                <li>
+                  Conectar al último <strong>Print String</strong> un primer nodo <strong>Branch</strong>
+                  con condición <strong>GET EsMiembroGremio</strong> directamente en el pin <em>Condition</em>.
+                </li>
+                <li>
+                  Rama <strong>TRUE</strong> (es miembro del gremio) → segundo <strong>Branch</strong>
+                  con condición <code>Nivel &gt;= 50 AND Reputacion &gt;= 80</code>:
+                  <ul>
+                    <li><strong>GET Nivel</strong> → <strong>&gt;= (Integer)</strong> con valor <code>50</code> → pin <em>A</em> de
+                      un <strong>AND</strong>.</li>
+                    <li><strong>GET Reputacion</strong> → <strong>&gt;= (Integer)</strong> con valor <code>80</code> → pin
+                      <em>B</em> del mismo <strong>AND</strong>.</li>
+                    <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"¡Descuento del 50%! Sos miembro del gremio,
+                        nivel alto y gran reputación."</em> en color <strong>amarillo</strong>.</li>
+                    <li>
+                      <strong>FALSE</strong> → tercer <strong>Branch</strong> con condición
+                      <code>Nivel &gt;= 50 OR Reputacion &gt;= 80</code>:
+                      <ul>
+                        <li><strong>GET Nivel</strong> → <strong>&gt;= (Integer)</strong> con valor <code>50</code> → pin <em>A</em>
+                          de un <strong>OR</strong>.</li>
+                        <li><strong>GET Reputacion</strong> → <strong>&gt;= (Integer)</strong> con valor <code>80</code> → pin
+                          <em>B</em> del mismo <strong>OR</strong>.</li>
+                        <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"¡Descuento del 30%! Sos miembro del gremio
+                            con buen nivel o reputación."</em> en color <strong>verde</strong>.</li>
+                        <li><strong>FALSE</strong> → <strong>Print String</strong>: <em>"Sin descuento. Sos miembro del gremio pero
+                            tu nivel y reputación son bajos."</em> en color <strong>naranja</strong>.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Rama <strong>FALSE</strong> (no es miembro del gremio) → cuarto <strong>Branch</strong>
+                  con condición <code>Reputacion &gt;= 70</code>:
+                  <ul>
+                    <li><strong>GET Reputacion</strong> → <strong>&gt;= (Integer)</strong> con valor <code>70</code> → pin
+                      <em>Condition</em>.</li>
+                    <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"Descuento del 15%. No sos miembro del gremio
+                        pero tu reputación te respalda."</em> en color <strong>verde</strong>.</li>
+                    <li><strong>FALSE</strong> → <strong>Print String</strong> usando <strong>Append</strong>: <em>"¡Fuera de mi
+                        tienda, " + NombreCliente + "! Sin gremio y sin reputación no sos bienvenido."</em> en color
+                      <strong>rojo</strong>.</li>
+                  </ul>
+                </li>
+                <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
+              </ol>
+              <div class="img-frame img-frame--inline">
+                <img
+                  src="img/ejercicio-04/detalle.png"
+                  alt="Detalle Ejercicio 04"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-04/detalle.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img
+                  src="img/ejercicio-04/blueprint.png"
+                  alt="Blueprint Ejercicio 04"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-04/blueprint.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 04  ══════ -->
+
+    <section class="exercise" id="ejercicio-05">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 05</h3>
+      </div>
+
+      <div class="exercise__row">
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Clasificar a un campeón en una de cuatro categorías de torneo (Bronce, Plata, Oro, Legendario) o descalificarlo, encapsulando la lógica de evaluación en una función reutilizable que recibe los stats como inputs, combina condiciones con AND y OR, y devuelve la categoría correspondiente como output.</p>
+            </div>
+          </div>
+        </div>
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                ===== EL TORNEO DE LOS REINOS =====<br>
+                Aldric -> Categoria: ORO!
+              </p>
+              <!--
+              <div class="img-frame">
+                <img
+                  src="img/ejercicio-05/resultado.png"
+                  alt="Resultado Ejercicio 05"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-05/resultado.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+              -->
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercise__row">
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+            
+              <ol class="procedure-list">
+                <li>Crear variable <strong>NombreCampeon</strong> (String) con valor default <code>"Aldric"</code>.</li>
+                <li>Crear variable <strong>Fuerza</strong> (Integer) con valor default <code>85</code>.</li>
+                <li>Crear variable <strong>Agilidad</strong> (Integer) con valor default <code>75</code>.</li>
+                <li>Crear variable <strong>Magia</strong> (Integer) con valor default <code>60</code>.</li>
+                <li>Crear variable <strong>Reputacion</strong> (Integer) con valor default <code>90</code>.</li>
+                <li>Crear variable <strong>EstaDescalificado</strong> (Boolean) con valor default <code>false</code>.</li>
+                <li>
+                  En el panel <em>My Blueprint</em>, sección <strong>Functions</strong>, clickeár el
+                  <strong>+</strong> y nombrar la función <code>ObtenerCategoria</code>.
+                </li>
+                <li>
+                  Con la función seleccionada, en el panel <strong>Details</strong> configurar los
+                  <strong>Inputs</strong> y el <strong>Output</strong>:
+                  <ul>
+                    <li>Input: <strong>Fuerza</strong> (Integer)</li>
+                    <li>Input: <strong>Agilidad</strong> (Integer)</li>
+                    <li>Input: <strong>Magia</strong> (Integer)</li>
+                    <li>Input: <strong>Reputacion</strong> (Integer)</li>
+                    <li>Input: <strong>EstaDescalificado</strong> (Boolean)</li>
+                    <li>Output: <strong>Categoria</strong> (String)</li>
+                  </ul>
+                </li>
+                <li>
+                  Dentro del gráfico de la función, armar la lógica de clasificación en cascada
+                  desde el nodo <em>ObtenerCategoria</em> (Entry):
+                  <ul>
+                    <li>
+                      Primer <strong>Branch</strong> con condición <strong>GET EstaDescalificado</strong>
+                      directamente en el pin <em>Condition</em>:
+                      <ul>
+                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> =
+                          <code>"DESCALIFICADO"</code>.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Rama <strong>FALSE</strong> → segundo <strong>Branch</strong> con condición
+                      <code>Fuerza &gt;= 90 AND Agilidad &gt;= 80 AND Magia &gt;= 70 AND Reputacion &gt;= 90</code>:
+                      <ul>
+                        <li>Encadenar tres nodos <strong>AND</strong> conectando los cuatro comparadores <strong>&gt;=
+                            (Integer)</strong> en secuencia.</li>
+                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> = <code>"LEGENDARIO"</code>.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Rama <strong>FALSE</strong> → tercer <strong>Branch</strong> con condición
+                      <code>(Fuerza &gt;= 75 AND Agilidad &gt;= 70) AND (Magia &gt;= 60 OR Reputacion &gt;= 80)</code>:
+                      <ul>
+                        <li>Primer <strong>AND</strong>: <strong>Fuerza &gt;= 75</strong> y <strong>Agilidad &gt;= 70</strong>.</li>
+                        <li><strong>OR</strong>: <strong>Magia &gt;= 60</strong> y <strong>Reputacion &gt;= 80</strong>.</li>
+                        <li>Segundo <strong>AND</strong>: salida del primer <strong>AND</strong> y salida del <strong>OR</strong>.
+                        </li>
+                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> = <code>"ORO"</code>.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Rama <strong>FALSE</strong> → cuarto <strong>Branch</strong> con condición
+                      <code>(Fuerza &gt;= 60 OR Agilidad &gt;= 60) AND Reputacion &gt;= 50</code>:
+                      <ul>
+                        <li><strong>OR</strong>: <strong>Fuerza &gt;= 60</strong> y <strong>Agilidad &gt;= 60</strong>.</li>
+                        <li><strong>AND</strong>: salida del <strong>OR</strong> y <strong>Reputacion &gt;= 50</strong>.</li>
+                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> = <code>"PLATA"</code>.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Rama <strong>FALSE</strong> → quinto <strong>Branch</strong> con condición
+                      <code>Fuerza &gt;= 40 OR Agilidad &gt;= 40 OR Magia &gt;= 40</code>:
+                      <ul>
+                        <li>Encadenar dos nodos <strong>OR</strong> con los tres comparadores <strong>&gt;= (Integer)</strong>.</li>
+                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> = <code>"BRONCE"</code>.
+                        </li>
+                        <li><strong>FALSE</strong> → <strong>Return Node</strong> con <em>Categoria</em> =
+                          <code>"SIN CLASIFICAR"</code>.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Volver al <em>Event Graph</em> y conectar <em>Event BeginPlay</em> a un
+                  <strong>Print String</strong> con el mensaje
+                  <em>"===== EL TORNEO DE LOS REINOS ====="</em>.
+                </li>
+                <li>
+                  Del <strong>Print String</strong>, conectar el nodo <strong>ObtenerCategoria</strong>
+                  y asignar cada pin de input:
+                  <ul>
+                    <li>Pin <em>Fuerza</em> → <strong>GET Fuerza</strong></li>
+                    <li>Pin <em>Agilidad</em> → <strong>GET Agilidad</strong></li>
+                    <li>Pin <em>Magia</em> → <strong>GET Magia</strong></li>
+                    <li>Pin <em>Reputacion</em> → <strong>GET Reputacion</strong></li>
+                    <li>Pin <em>EstaDescalificado</em> → <strong>GET EstaDescalificado</strong></li>
+                  </ul>
+                </li>
+                <li>
+                  De la salida <em>Categoria</em> de la función, armar un <strong>Append</strong> en cadena:
+                  <ul>
+                    <li>Primer <strong>Append</strong>: pin A → <strong>GET NombreCampeon</strong>, pin B →
+                      <code>" → Categoría: "</code>.</li>
+                    <li>Segundo <strong>Append</strong>: pin A → salida del primer Append, pin B → salida <em>Categoria</em>.</li>
+                  </ul>
+                </li>
+                <li>
+                  Conectar la salida del último <strong>Append</strong> al pin <em>In String</em>
+                  de un <strong>Print String</strong> final.
+                </li>
+                <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
+              </ol>
+              <div class="img-frame img-frame--inline">
+                <img
+                  src="img/ejercicio-05/detalle.png"
+                  alt="Detalle Ejercicio 05"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-05/detalle.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img
+                  src="img/ejercicio-05/blueprint.png"
+                  alt="Blueprint Ejercicio 05"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-05/blueprint.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+
+              <div class="img-frame img-frame--large">
+                <img
+                  src="img/ejercicio-05/funcion.png"
+                  alt="Función Ejercicio 05"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">img/ejercicio-05/funcion.png</div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 05  ══════ -->
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Trabajo Práctico · Programación · <span id="footer-year"></span></p>
+  </footer>
+
+  <!-- LIGHTBOX (generado una vez, reutilizado para todas las imágenes) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <div class="lightbox__inner">
+      <img class="lightbox__img" id="lightbox-img" src="" alt="Vista ampliada" draggable="false" />
+    </div>
+    <button class="lightbox__close" id="lightbox-close" title="Cerrar (Esc)">✕</button>
+    <p class="lightbox__hint">Rueda para zoom · Arrastrá para mover · Esc o click fuera para cerrar</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
