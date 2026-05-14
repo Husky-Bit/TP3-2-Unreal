@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,9 +8,12 @@
   <meta name="description" content="Trabajo Práctico Unreal Engine - Blueprints 2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- BANNER SUPERIOR 
@@ -20,28 +24,20 @@
     <div class="banner__inner">
 
       <div class="banner__logo-slot">
-        <img
-          src="img/logo-izq.png"
-          alt="Logo institución"
-          class="banner__logo"
-          onerror="this.parentElement.querySelector('.banner__logo-fallback').style.display='flex'; this.style.display='none'"
-        />
+        <img src="img/logo-izq.png" alt="Logo institución" class="banner__logo"
+          onerror="this.parentElement.querySelector('.banner__logo-fallback').style.display='flex'; this.style.display='none'" />
         <div class="banner__logo-fallback">LOGO</div>
       </div>
 
       <div class="banner__center">
-        <p class="banner__institution">       </p>
-        <h1 class="banner__title">         </h1>
+        <p class="banner__institution"> </p>
+        <h1 class="banner__title"> </h1>
         <p class="banner__meta"> <!-- Año 2125 &nbsp;·&nbsp; Turno Noche &nbsp;·&nbsp; Prof. Gonzalo Agüero--> </p>
       </div>
 
       <div class="banner__logo-slot banner__logo-slot--right">
-        <img
-          src="img/logo-der.png"
-          alt="Logo secundario"
-          class="banner__logo"
-          onerror="this.parentElement.querySelector('.banner__logo-fallback').style.display='flex'; this.style.display='none'"
-        />
+        <img src="img/logo-der.png" alt="Logo secundario" class="banner__logo"
+          onerror="this.parentElement.querySelector('.banner__logo-fallback').style.display='flex'; this.style.display='none'" />
         <div class="banner__logo-fallback">LOGO</div>
       </div>
 
@@ -60,6 +56,9 @@
   <nav class="exercise-index">
     <div class="exercise-index__inner">
       <span class="exercise-index__label">Ir a:</span>
+      <a href="#ejercicio-08" class="exercise-index__link">Ejercicio 08</a>
+      <a href="#ejercicio-09" class="exercise-index__link">Ejercicio 09</a>
+      <a href="#ejercicio-10" class="exercise-index__link">Ejercicio 10</a>
       <a href="#ejercicio-11" class="exercise-index__link">Ejercicio 11</a>
       <a href="#ejercicio-12" class="exercise-index__link">Ejercicio 12</a>
       <!-- Agregar más links aca al sumar ejercicios -->
@@ -72,15 +71,1140 @@
   <!-- LISTA DE EJERCICIOS -->
   <main class="exercises-wrapper">
 
+    <section class="exercise" id="ejercicio-01">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 01</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Objetivo...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                Resultado...
+              </p>
+              <!-- 
+                          <div class="img-frame">
+                            <img
+                              src="img/ejercicio-01/resultado.png"
+                              alt="Resultado Ejercicio 01"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-01/resultado.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+
+                <li>
+              </ol>
+
+              <!--
+                                          Imagen de detalle dentro del procedimiento
+                                      <div class="img-frame img-frame--inline">
+                                        <img
+                                          src="img/ejercicio-01/detalle.png"
+                                          alt="Detalle Ejercicio 01"
+                                          class="img-frame__img"
+                                          onerror="this.parentElement.classList.add('img-frame--missing')"
+                                        />
+                                        <div class="img-frame__missing-label">
+                                          img/ejercicio-01/detalle.png
+                                        </div>
+                                        <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                                      </div>
+                                      -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-01/blueprint.png" alt="Blueprint Ejercicio 01" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-01/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 01  ══════ -->
+
+    <section class="exercise" id="ejercicio-02">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 02</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Objetivo...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                Resultado...
+              </p>
+              <!-- 
+                          <div class="img-frame">
+                            <img
+                              src="img/ejercicio-02/resultado.png"
+                              alt="Resultado Ejercicio 02"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-02/resultado.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+
+                <li>
+              </ol>
+
+              <!--
+                                          Imagen de detalle dentro del procedimiento
+                                      <div class="img-frame img-frame--inline">
+                                        <img
+                                          src="img/ejercicio-02/detalle.png"
+                                          alt="Detalle Ejercicio 02"
+                                          class="img-frame__img"
+                                          onerror="this.parentElement.classList.add('img-frame--missing')"
+                                        />
+                                        <div class="img-frame__missing-label">
+                                          img/ejercicio-02/detalle.png
+                                        </div>
+                                        <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                                      </div>
+                                      -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-02/blueprint.png" alt="Blueprint Ejercicio 02" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-02/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 02  ══════ -->
+
+    <section class="exercise" id="ejercicio-03">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 03</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Objetivo...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                Resultado...
+              </p>
+              <!-- 
+                          <div class="img-frame">
+                            <img
+                              src="img/ejercicio-03/resultado.png"
+                              alt="Resultado Ejercicio 03"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-03/resultado.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+
+                <li>
+              </ol>
+
+              <!--
+                                          Imagen de detalle dentro del procedimiento
+                                      <div class="img-frame img-frame--inline">
+                                        <img
+                                          src="img/ejercicio-03/detalle.png"
+                                          alt="Detalle Ejercicio 03"
+                                          class="img-frame__img"
+                                          onerror="this.parentElement.classList.add('img-frame--missing')"
+                                        />
+                                        <div class="img-frame__missing-label">
+                                          img/ejercicio-03/detalle.png
+                                        </div>
+                                        <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                                      </div>
+                                      -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-03/blueprint.png" alt="Blueprint Ejercicio 03" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-03/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 03  ══════ -->
+
+    <section class="exercise" id="ejercicio-04">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 04</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Objetivo...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                Resultado...
+              </p>
+              <!-- 
+                          <div class="img-frame">
+                            <img
+                              src="img/ejercicio-04/resultado.png"
+                              alt="Resultado Ejercicio 04"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-04/resultado.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+
+                <li>
+              </ol>
+
+              <!--
+                                          Imagen de detalle dentro del procedimiento
+                                      <div class="img-frame img-frame--inline">
+                                        <img
+                                          src="img/ejercicio-04/detalle.png"
+                                          alt="Detalle Ejercicio 04"
+                                          class="img-frame__img"
+                                          onerror="this.parentElement.classList.add('img-frame--missing')"
+                                        />
+                                        <div class="img-frame__missing-label">
+                                          img/ejercicio-04/detalle.png
+                                        </div>
+                                        <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                                      </div>
+                                      -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-04/blueprint.png" alt="Blueprint Ejercicio 04" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-04/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 04  ══════ -->
+
+    <section class="exercise" id="ejercicio-05">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 05</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Objetivo...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                Resultado...
+              </p>
+              <!-- 
+                          <div class="img-frame">
+                            <img
+                              src="img/ejercicio-05/resultado.png"
+                              alt="Resultado Ejercicio 05"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-05/resultado.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+
+                <li>
+              </ol>
+
+              <!--
+                                          Imagen de detalle dentro del procedimiento
+                                      <div class="img-frame img-frame--inline">
+                                        <img
+                                          src="img/ejercicio-05/detalle.png"
+                                          alt="Detalle Ejercicio 05"
+                                          class="img-frame__img"
+                                          onerror="this.parentElement.classList.add('img-frame--missing')"
+                                        />
+                                        <div class="img-frame__missing-label">
+                                          img/ejercicio-05/detalle.png
+                                        </div>
+                                        <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                                      </div>
+                                      -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-05/blueprint.png" alt="Blueprint Ejercicio 05" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-05/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 05  ══════ -->
+
+    <section class="exercise" id="ejercicio-06">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 06</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Objetivo...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                Resultado...
+              </p>
+              <!-- 
+                          <div class="img-frame">
+                            <img
+                              src="img/ejercicio-06/resultado.png"
+                              alt="Resultado Ejercicio 06"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-06/resultado.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+
+                <li>
+              </ol>
+
+              <!--
+                                          Imagen de detalle dentro del procedimiento
+                                      <div class="img-frame img-frame--inline">
+                                        <img
+                                          src="img/ejercicio-06/detalle.png"
+                                          alt="Detalle Ejercicio 06"
+                                          class="img-frame__img"
+                                          onerror="this.parentElement.classList.add('img-frame--missing')"
+                                        />
+                                        <div class="img-frame__missing-label">
+                                          img/ejercicio-06/detalle.png
+                                        </div>
+                                        <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                                      </div>
+                                      -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-06/blueprint.png" alt="Blueprint Ejercicio 06" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-06/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 06  ══════ -->
+
+    <section class="exercise" id="ejercicio-07">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 07</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Objetivo...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                Resultado...
+              </p>
+              <!-- 
+                          <div class="img-frame">
+                            <img
+                              src="img/ejercicio-07/resultado.png"
+                              alt="Resultado Ejercicio 07"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-07/resultado.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+
+                <li>
+              </ol>
+
+              <!--
+                                          Imagen de detalle dentro del procedimiento
+                                      <div class="img-frame img-frame--inline">
+                                        <img
+                                          src="img/ejercicio-07/detalle.png"
+                                          alt="Detalle Ejercicio 07"
+                                          class="img-frame__img"
+                                          onerror="this.parentElement.classList.add('img-frame--missing')"
+                                        />
+                                        <div class="img-frame__missing-label">
+                                          img/ejercicio-07/detalle.png
+                                        </div>
+                                        <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                                      </div>
+                                      -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-07/blueprint.png" alt="Blueprint Ejercicio 07" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-07/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 07  ══════ -->
+
+    <section class="exercise" id="ejercicio-08">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 08</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Objetivo...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                Resultado...
+              </p>
+              <!-- 
+                          <div class="img-frame">
+                            <img
+                              src="img/ejercicio-08/resultado.png"
+                              alt="Resultado Ejercicio 08"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-08/resultado.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+
+                <li>
+              </ol>
+
+              <!--
+                                          Imagen de detalle dentro del procedimiento
+                                      <div class="img-frame img-frame--inline">
+                                        <img
+                                          src="img/ejercicio-08/detalle.png"
+                                          alt="Detalle Ejercicio 08"
+                                          class="img-frame__img"
+                                          onerror="this.parentElement.classList.add('img-frame--missing')"
+                                        />
+                                        <div class="img-frame__missing-label">
+                                          img/ejercicio-08/detalle.png
+                                        </div>
+                                        <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                                      </div>
+                                      -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-08/blueprint.png" alt="Blueprint Ejercicio 08" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-08/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 08  ══════ -->
+
+    <section class="exercise" id="ejercicio-09">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 09</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Objetivo...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                Resultado...
+              </p>
+              <!-- 
+              <div class="img-frame">
+                <img
+                  src="img/ejercicio-09/resultado.png"
+                  alt="Resultado Ejercicio 09"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-09/resultado.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+              -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+
+                <li>
+              </ol>
+
+              <!--
+                              Imagen de detalle dentro del procedimiento
+                          <div class="img-frame img-frame--inline">
+                            <img
+                              src="img/ejercicio-09/detalle.png"
+                              alt="Detalle Ejercicio 09"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-09/detalle.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-09/blueprint.png" alt="Blueprint Ejercicio 09" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-09/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 09  ══════ -->
+
+    <section class="exercise" id="ejercicio-10">
+
+      <div class="exercise__header">
+        <h3 class="exercise__number">Ejercicio 10</h3>
+      </div>
+
+      <!-- FILA SUPERIOR: Objetivo | Resultado -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Objetivo</div>
+            <div class="panel__body">
+              <p class="panel__text">
+                Crear una función que reciba el nombre de un aventurero y su nivel, y devuelva un mensaje de bienvenida
+                personalizado. Llamarla desde el Event Graph con 3 aventureros distintos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Resultado log y Pantalla</div>
+            <div class="panel__body panel__body--result">
+              <p class="panel__text">
+                ¡Bienvenido Nombre, nivel 5! Toma asiento aventurero.<br>
+                ¡Bienvenido Nombre, nivel 8! Toma asiento aventurero.<br>
+                ¡Bienvenido Nombre, nivel 3! Toma asiento aventurero.
+              </p>
+              <!-- 
+              <div class="img-frame">
+                <img
+                  src="img/ejercicio-10/resultado.png"
+                  alt="Resultado Ejercicio 10"
+                  class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')"
+                />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-10/resultado.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+              -->
+
+              <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila superior -->
+
+      <!-- FILA INFERIOR: Procedimiento | Blueprint -->
+      <div class="exercise__row">
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Procedimiento</div>
+            <div class="panel__body panel__body--procedure">
+
+              <ol class="procedure-list">
+                <li>
+                  En el panel <em>My Blueprint</em>, buscar la sección <strong>Functions</strong>,
+                  clickear el <strong>+</strong> y nombrar la función <code>ConstruirSaludo</code>.
+                </li>
+                <li>
+                  Se abre automáticamente el gráfico de la función con un nodo <em>Entry</em>
+                  y otro de <em>Return</em> (al establecer un output).
+                </li>
+                <li>
+                  Con la función seleccionada, en el panel <strong>Details</strong> configurar
+                  los <strong>Inputs</strong> y el <strong>Output</strong>:
+                  <ul>
+                    <li>Input: <strong>NombreAventurero</strong> (String)</li>
+                    <li>Input: <strong>Nivel</strong> (Integer)</li>
+                    <li>Output: <strong>Mensaje</strong> (String)</li>
+                  </ul>
+                </li>
+                <li>
+                  Dentro del gráfico de la función, arrastrar los pins <strong>NombreAventurero</strong>
+                  y <strong>Nivel</strong> desde el nodo <em>Entry</em> para usarlos en la construcción
+                  del mensaje. Armar el mensaje
+                  <em>"¡Bienvenido NombreAventurero, nivel Nivel! Toma asiento aventurero."</em>
+                  usando nodos <strong>Append</strong> encadenados:
+                  <ul>
+                    <li>Primer <strong>Append</strong>: pin A → <code>"¡Bienvenido "</code>, pin B →
+                      <strong>NombreAventurero</strong>.
+                    </li>
+                    <li>Segundo <strong>Append</strong>: pin A → salida del anterior, pin B → <code>", nivel "</code>.
+                    </li>
+                    <li>Tercer <strong>Append</strong>: pin A → salida del anterior, pin B → <strong>ToString</strong>
+                      del pin
+                      <strong>Nivel</strong>.
+                    </li>
+                    <li>Cuarto <strong>Append</strong>: pin A → salida del anterior, pin B →
+                      <code>"! Toma asiento aventurero."</code>.
+                    </li>
+                    <li>Conectar la salida del último <strong>Append</strong> al pin <em>Mensaje</em> del <strong>Return
+                        Node</strong>.</li>
+                  </ul>
+                </li>
+                <li>
+                  Volver al <em>Event Graph</em> y conectar <em>Event BeginPlay</em> a tres llamadas
+                  encadenadas al nodo <strong>ConstruirSaludo</strong>, cada una seguida de un
+                  <strong>Print String</strong>:
+                  <ul>
+                    <li>
+                      <strong>Llamada 1:</strong>
+                      <ul>
+                        <li>Pin <em>NombreAventurero</em> → escribir un nombre.</li>
+                        <li>Pin <em>Nivel</em> → <code>5</code>.</li>
+                        <li>Salida <em>Mensaje</em> → pin <em>In String</em> de un <strong>Print String</strong>.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>Llamada 2:</strong>
+                      <ul>
+                        <li>Pin <em>NombreAventurero</em> → escribir un nombre.</li>
+                        <li>Pin <em>Nivel</em> → <code>8</code>.</li>
+                        <li>Salida <em>Mensaje</em> → pin <em>In String</em> de un <strong>Print String</strong>.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>Llamada 3:</strong>
+                      <ul>
+                        <li>Pin <em>NombreAventurero</em> → escribir un nombre.</li>
+                        <li>Pin <em>Nivel</em> → <code>3</code>.</li>
+                        <li>Salida <em>Mensaje</em> → pin <em>In String</em> de un <strong>Print String</strong>.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Encadenar los tres <strong>Print String</strong> uno tras otro por el pin de ejecución.</li>
+                <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
+              </ol>
+
+
+              <!--
+                              Imagen de detalle dentro del procedimiento
+                          <div class="img-frame img-frame--inline">
+                            <img
+                              src="img/ejercicio-10/detalle.png"
+                              alt="Detalle Ejercicio 10"
+                              class="img-frame__img"
+                              onerror="this.parentElement.classList.add('img-frame--missing')"
+                            />
+                            <div class="img-frame__missing-label">
+                              img/ejercicio-10/detalle.png
+                            </div>
+                            <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+                          </div>
+                          -->
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="exercise__col">
+          <div class="panel">
+            <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
+            <div class="panel__body panel__body--blueprint">
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-10/blueprint.png" alt="Blueprint Ejercicio 10" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-10/blueprint.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+              <div class="img-frame img-frame--large">
+                <img src="img/ejercicio-10/funcion.png" alt="Blueprint Ejercicio 10" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
+                <div class="img-frame__missing-label">
+                  img/ejercicio-10/funcion.png
+                </div>
+                <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /fila inferior -->
+
+    </section>
+    <!-- ══════  FIN EJERCICIO 10  ══════ -->
 
     <!-- 
          EJERCICIO 11
-         
-         IMÁGENES:
-           img/ejercicio-11/resultado.png   → captura del log/pantalla
-           img/ejercicio-11/detalle.png     → imagen dentro del procedimiento
-           img/ejercicio-11/blueprint.png   → gráfica blueprint completa
-         Si alguna imagen no existe, se muestra un placeholder gris.
      -->
     <section class="exercise" id="ejercicio-11">
 
@@ -96,7 +1220,8 @@
             <div class="panel__header">Objetivo</div>
             <div class="panel__body">
               <p class="panel__text">
-                Un guardia permite el acceso al pueblo solo si el viajero tiene al menos 10 monedas de peaje. Usar un comparador numérico y un Branch para imprimir si puede entrar o es rechazado
+                Un guardia permite el acceso al pueblo solo si el viajero tiene al menos 10 monedas de peaje. Usar un
+                comparador numérico y un Branch para imprimir si puede entrar o es rechazado
               </p>
             </div>
           </div>
@@ -124,7 +1249,7 @@
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
               -->
-              
+
               <p class="panel__caption">Resultado al compilar y ejecutar el BP</p>
             </div>
           </div>
@@ -139,7 +1264,7 @@
           <div class="panel">
             <div class="panel__header">Procedimiento</div>
             <div class="panel__body panel__body--procedure">
-            
+
               <ol class="procedure-list">
                 <li>Crear variable <strong>Monedas</strong> (Integer) con valor default <code>7</code>.</li>
                 <li>Crear variable <strong>NombreViajero</strong> (String) con valor default <code>"Kael"</code>.</li>
@@ -152,9 +1277,12 @@
                   Conectar el <strong>Print String</strong> a un nodo <strong>Branch</strong>.
                   Armar la condición <code>Monedas &gt;= 10</code>:
                   <ul>
-                    <li>Arrastrar <strong>GET Monedas</strong> y conectarlo a un nodo <strong>&gt;= (Integer)</strong> con valor
-                      <code>10</code>.</li>
-                    <li>Conectar la salida Boolean del <strong>&gt;=</strong> al pin <em>Condition</em> del <strong>Branch</strong>.
+                    <li>Arrastrar <strong>GET Monedas</strong> y conectarlo a un nodo <strong>&gt;= (Integer)</strong>
+                      con valor
+                      <code>10</code>.
+                    </li>
+                    <li>Conectar la salida Boolean del <strong>&gt;=</strong> al pin <em>Condition</em> del
+                      <strong>Branch</strong>.
                     </li>
                   </ul>
                 </li>
@@ -190,7 +1318,7 @@
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
               -->
-              
+
 
             </div>
           </div>
@@ -201,12 +1329,8 @@
             <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
             <div class="panel__body panel__body--blueprint">
               <div class="img-frame img-frame--large">
-                <img
-                  src="img/ejercicio-11/blueprint.png"
-                  alt="Blueprint Ejercicio 11"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-11/blueprint.png" alt="Blueprint Ejercicio 11" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">
                   img/ejercicio-11/blueprint.png
                 </div>
@@ -242,7 +1366,8 @@
             <div class="panel__header">Objetivo</div>
             <div class="panel__body">
               <p class="panel__text">
-                Un cofre solo se abre si el jugador tiene la llave correcta Y no está maldito. Usar dos variables booleanas combinadas con AND para determinar si el cofre se abre o permanece cerrado.</p>
+                Un cofre solo se abre si el jugador tiene la llave correcta Y no está maldito. Usar dos variables
+                booleanas combinadas con AND para determinar si el cofre se abre o permanece cerrado.</p>
             </div>
           </div>
         </div>
@@ -277,11 +1402,12 @@
           <div class="panel">
             <div class="panel__header">Procedimiento</div>
             <div class="panel__body panel__body--procedure">
-            
+
               <ol class="procedure-list">
                 <li>Crear variable <strong>TieneLlave</strong> (Boolean) con valor default <code>true</code>.</li>
                 <li>Crear variable <strong>EstaMaldito</strong> (Boolean) con valor default <code>false</code>.</li>
-                <li>Crear variable <strong>NombreJugador</strong> (String) con valor default <code>"Aragorn"</code>.</li>
+                <li>Crear variable <strong>NombreJugador</strong> (String) con valor default <code>"Aragorn"</code>.
+                </li>
                 <li>
                   En el <em>Event Graph</em>, conectar <em>Event BeginPlay</em> a un nodo
                   <strong>Print String</strong> con el mensaje
@@ -291,10 +1417,15 @@
                   Conectar el <strong>Print String</strong> a un nodo <strong>Branch</strong>.
                   Armar la condición <code>TieneLlave AND NOT EstaMaldito</code>:
                   <ul>
-                    <li>Arrastrar <strong>GET TieneLlave</strong> al pin <em>A</em> de un nodo <strong>AND</strong>.</li>
-                    <li>Arrastrar <strong>GET EstaMaldito</strong> a un nodo <strong>NOT</strong> y conectar su salida al pin
-                      <em>B</em> del mismo <strong>AND</strong>.</li>
-                    <li>Conectar la salida del <strong>AND</strong> al pin <em>Condition</em> del <strong>Branch</strong>.</li>
+                    <li>Arrastrar <strong>GET TieneLlave</strong> al pin <em>A</em> de un nodo <strong>AND</strong>.
+                    </li>
+                    <li>Arrastrar <strong>GET EstaMaldito</strong> a un nodo <strong>NOT</strong> y conectar su salida
+                      al pin
+                      <em>B</em> del mismo <strong>AND</strong>.
+                    </li>
+                    <li>Conectar la salida del <strong>AND</strong> al pin <em>Condition</em> del
+                      <strong>Branch</strong>.
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -309,11 +1440,15 @@
                       <strong>FALSE</strong> → conectar a un segundo nodo <strong>Branch</strong>
                       con condición <code>NOT TieneLlave</code>:
                       <ul>
-                        <li><strong>GET TieneLlave</strong> → nodo <strong>NOT</strong> → pin <em>Condition</em> del segundo
-                          <strong>Branch</strong>.</li>
-                        <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"No tenés la llave. El cofre permanece
+                        <li><strong>GET TieneLlave</strong> → nodo <strong>NOT</strong> → pin <em>Condition</em> del
+                          segundo
+                          <strong>Branch</strong>.
+                        </li>
+                        <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"No tenés la llave. El cofre
+                            permanece
                             cerrado."</em> en color <strong>rojo</strong>.</li>
-                        <li><strong>FALSE</strong> → <strong>Print String</strong>: <em>"Estás maldito. No podés abrir el
+                        <li><strong>FALSE</strong> → <strong>Print String</strong>: <em>"Estás maldito. No podés abrir
+                            el
                             cofre."</em> en color <strong>rojo oscuro</strong>.</li>
                       </ul>
                     </li>
@@ -322,12 +1457,8 @@
                 <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
               </ol>
               <div class="img-frame img-frame--inline">
-                <img
-                  src="img/ejercicio-12/detalle.png"
-                  alt="Detalle Ejercicio 12"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-12/detalle.png" alt="Detalle Ejercicio 12" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">img/ejercicio-12/detalle.png</div>
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
@@ -339,12 +1470,8 @@
             <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
             <div class="panel__body panel__body--blueprint">
               <div class="img-frame img-frame--large">
-                <img
-                  src="img/ejercicio-12/blueprint.png"
-                  alt="Blueprint Ejercicio 12"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-12/blueprint.png" alt="Blueprint Ejercicio 12" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">img/ejercicio-12/blueprint.png</div>
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
@@ -368,7 +1495,8 @@
             <div class="panel__header">Objetivo</div>
             <div class="panel__body">
               <p class="panel__text">
-                Un troll bloquea un puente y solo deja pasar a quien sea un guerrero de alto nivel, O tenga un Pase real, pero NUNCA a alguien que esté maldito, sin importar las otras condiciones.</p>
+                Un troll bloquea un puente y solo deja pasar a quien sea un guerrero de alto nivel, O tenga un Pase
+                real, pero NUNCA a alguien que esté maldito, sin importar las otras condiciones.</p>
             </div>
           </div>
         </div>
@@ -403,7 +1531,7 @@
           <div class="panel">
             <div class="panel__header">Procedimiento</div>
             <div class="panel__body panel__body--procedure">
-            
+
               <ol class="procedure-list">
                 <li>Crear variable <strong>NombreViajero</strong> (String) con valor default <code>"Finn"</code>.</li>
                 <li>Crear variable <strong>Nivel</strong> (Integer) con valor default <code>75</code>.</li>
@@ -417,11 +1545,14 @@
                   Conectar el <strong>Print String</strong> a un primer nodo <strong>Branch</strong>
                   con condición <code>NOT EstaMaldito</code>:
                   <ul>
-                    <li>Arrastrar <strong>GET EstaMaldito</strong> a un nodo <strong>NOT</strong> y conectar su salida al pin
-                      <em>Condition</em>.</li>
+                    <li>Arrastrar <strong>GET EstaMaldito</strong> a un nodo <strong>NOT</strong> y conectar su salida
+                      al pin
+                      <em>Condition</em>.
+                    </li>
                     <li>
                       <strong>FALSE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
-                      <em>"¡Atrás, " + NombreViajero + "! El troll huele la maldición. Nadie maldito cruza este puente."</em>
+                      <em>"¡Atrás, " + NombreViajero + "! El troll huele la maldición. Nadie maldito cruza este
+                        puente."</em>
                       en color <strong>rojo</strong>.
                     </li>
                   </ul>
@@ -430,10 +1561,13 @@
                   De la rama <strong>TRUE</strong> del primer <strong>Branch</strong>, conectar un segundo
                   <strong>Branch</strong> con condición <code>Nivel &gt;= 70 OR TienePase</code>:
                   <ul>
-                    <li>Arrastrar <strong>GET Nivel</strong> a un nodo <strong>&gt;= (Integer)</strong> con valor <code>70</code> →
-                      pin <em>A</em> de un nodo <strong>OR</strong>.</li>
+                    <li>Arrastrar <strong>GET Nivel</strong> a un nodo <strong>&gt;= (Integer)</strong> con valor
+                      <code>70</code> →
+                      pin <em>A</em> de un nodo <strong>OR</strong>.
+                    </li>
                     <li>Arrastrar <strong>GET TienePase</strong> → pin <em>B</em> del mismo <strong>OR</strong>.</li>
-                    <li>Conectar la salida del <strong>OR</strong> al pin <em>Condition</em> del segundo <strong>Branch</strong>.
+                    <li>Conectar la salida del <strong>OR</strong> al pin <em>Condition</em> del segundo
+                      <strong>Branch</strong>.
                     </li>
                     <li>
                       <strong>FALSE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
@@ -462,12 +1596,8 @@
                 <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
               </ol>
               <div class="img-frame img-frame--inline">
-                <img
-                  src="img/ejercicio-13/detalle.png"
-                  alt="Detalle Ejercicio 13"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-13/detalle.png" alt="Detalle Ejercicio 13" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">img/ejercicio-13/detalle.png</div>
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
@@ -479,12 +1609,8 @@
             <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
             <div class="panel__body panel__body--blueprint">
               <div class="img-frame img-frame--large">
-                <img
-                  src="img/ejercicio-13/blueprint.png"
-                  alt="Blueprint Ejercicio 13"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-13/blueprint.png" alt="Blueprint Ejercicio 13" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">img/ejercicio-13/blueprint.png</div>
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
@@ -495,7 +1621,7 @@
 
     </section>
     <!-- ══════  FIN EJERCICIO 13  ══════ -->
-    
+
     <section class="exercise" id="ejercicio-14">
 
       <div class="exercise__header">
@@ -508,7 +1634,9 @@
             <div class="panel__header">Objetivo</div>
             <div class="panel__body">
               <p class="panel__text">
-                Simular una tienda que ofrece distintos descuentos según la combinación de condiciones del cliente: si es miembro del gremio, si su nivel supera cierto rango, y si tiene reputación suficiente. Cada combinación da un resultado distinto.</p>
+                Simular una tienda que ofrece distintos descuentos según la combinación de condiciones del cliente: si
+                es miembro del gremio, si su nivel supera cierto rango, y si tiene reputación suficiente. Cada
+                combinación da un resultado distinto.</p>
             </div>
           </div>
         </div>
@@ -544,7 +1672,7 @@
           <div class="panel">
             <div class="panel__header">Procedimiento</div>
             <div class="panel__body panel__body--procedure">
-            
+
               <ol class="procedure-list">
                 <li>Crear variable <strong>NombreCliente</strong> (String) con valor default <code>"Mira"</code>.</li>
                 <li>Crear variable <strong>EsMiembroGremio</strong> (Boolean) con valor default <code>true</code>.</li>
@@ -566,23 +1694,33 @@
                   Rama <strong>TRUE</strong> (es miembro del gremio) → segundo <strong>Branch</strong>
                   con condición <code>Nivel &gt;= 50 AND Reputacion &gt;= 80</code>:
                   <ul>
-                    <li><strong>GET Nivel</strong> → <strong>&gt;= (Integer)</strong> con valor <code>50</code> → pin <em>A</em> de
-                      un <strong>AND</strong>.</li>
-                    <li><strong>GET Reputacion</strong> → <strong>&gt;= (Integer)</strong> con valor <code>80</code> → pin
-                      <em>B</em> del mismo <strong>AND</strong>.</li>
-                    <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"¡Descuento del 50%! Sos miembro del gremio,
+                    <li><strong>GET Nivel</strong> → <strong>&gt;= (Integer)</strong> con valor <code>50</code> → pin
+                      <em>A</em> de
+                      un <strong>AND</strong>.
+                    </li>
+                    <li><strong>GET Reputacion</strong> → <strong>&gt;= (Integer)</strong> con valor <code>80</code> →
+                      pin
+                      <em>B</em> del mismo <strong>AND</strong>.
+                    </li>
+                    <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"¡Descuento del 50%! Sos miembro del
+                        gremio,
                         nivel alto y gran reputación."</em> en color <strong>amarillo</strong>.</li>
                     <li>
                       <strong>FALSE</strong> → tercer <strong>Branch</strong> con condición
                       <code>Nivel &gt;= 50 OR Reputacion &gt;= 80</code>:
                       <ul>
-                        <li><strong>GET Nivel</strong> → <strong>&gt;= (Integer)</strong> con valor <code>50</code> → pin <em>A</em>
+                        <li><strong>GET Nivel</strong> → <strong>&gt;= (Integer)</strong> con valor <code>50</code> →
+                          pin <em>A</em>
                           de un <strong>OR</strong>.</li>
-                        <li><strong>GET Reputacion</strong> → <strong>&gt;= (Integer)</strong> con valor <code>80</code> → pin
-                          <em>B</em> del mismo <strong>OR</strong>.</li>
-                        <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"¡Descuento del 30%! Sos miembro del gremio
+                        <li><strong>GET Reputacion</strong> → <strong>&gt;= (Integer)</strong> con valor <code>80</code>
+                          → pin
+                          <em>B</em> del mismo <strong>OR</strong>.
+                        </li>
+                        <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"¡Descuento del 30%! Sos miembro
+                            del gremio
                             con buen nivel o reputación."</em> en color <strong>verde</strong>.</li>
-                        <li><strong>FALSE</strong> → <strong>Print String</strong>: <em>"Sin descuento. Sos miembro del gremio pero
+                        <li><strong>FALSE</strong> → <strong>Print String</strong>: <em>"Sin descuento. Sos miembro del
+                            gremio pero
                             tu nivel y reputación son bajos."</em> en color <strong>naranja</strong>.</li>
                       </ul>
                     </li>
@@ -592,24 +1730,25 @@
                   Rama <strong>FALSE</strong> (no es miembro del gremio) → cuarto <strong>Branch</strong>
                   con condición <code>Reputacion &gt;= 70</code>:
                   <ul>
-                    <li><strong>GET Reputacion</strong> → <strong>&gt;= (Integer)</strong> con valor <code>70</code> → pin
-                      <em>Condition</em>.</li>
-                    <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"Descuento del 15%. No sos miembro del gremio
+                    <li><strong>GET Reputacion</strong> → <strong>&gt;= (Integer)</strong> con valor <code>70</code> →
+                      pin
+                      <em>Condition</em>.
+                    </li>
+                    <li><strong>TRUE</strong> → <strong>Print String</strong>: <em>"Descuento del 15%. No sos miembro
+                        del gremio
                         pero tu reputación te respalda."</em> en color <strong>verde</strong>.</li>
-                    <li><strong>FALSE</strong> → <strong>Print String</strong> usando <strong>Append</strong>: <em>"¡Fuera de mi
+                    <li><strong>FALSE</strong> → <strong>Print String</strong> usando <strong>Append</strong>:
+                      <em>"¡Fuera de mi
                         tienda, " + NombreCliente + "! Sin gremio y sin reputación no sos bienvenido."</em> en color
-                      <strong>rojo</strong>.</li>
+                      <strong>rojo</strong>.
+                    </li>
                   </ul>
                 </li>
                 <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
               </ol>
               <div class="img-frame img-frame--inline">
-                <img
-                  src="img/ejercicio-14/detalle.png"
-                  alt="Detalle Ejercicio 14"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-14/detalle.png" alt="Detalle Ejercicio 14" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">img/ejercicio-14/detalle.png</div>
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
@@ -621,12 +1760,8 @@
             <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
             <div class="panel__body panel__body--blueprint">
               <div class="img-frame img-frame--large">
-                <img
-                  src="img/ejercicio-14/blueprint.png"
-                  alt="Blueprint Ejercicio 14"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-14/blueprint.png" alt="Blueprint Ejercicio 14" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">img/ejercicio-14/blueprint.png</div>
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
@@ -650,7 +1785,9 @@
             <div class="panel__header">Objetivo</div>
             <div class="panel__body">
               <p class="panel__text">
-                Clasificar a un campeón en una de cuatro categorías de torneo (Bronce, Plata, Oro, Legendario) o descalificarlo, encapsulando la lógica de evaluación en una función reutilizable que recibe los stats como inputs, combina condiciones con AND y OR, y devuelve la categoría correspondiente como output.</p>
+                Clasificar a un campeón en una de cuatro categorías de torneo (Bronce, Plata, Oro, Legendario) o
+                descalificarlo, encapsulando la lógica de evaluación en una función reutilizable que recibe los stats
+                como inputs, combina condiciones con AND y OR, y devuelve la categoría correspondiente como output.</p>
             </div>
           </div>
         </div>
@@ -685,14 +1822,15 @@
           <div class="panel">
             <div class="panel__header">Procedimiento</div>
             <div class="panel__body panel__body--procedure">
-            
+
               <ol class="procedure-list">
                 <li>Crear variable <strong>NombreCampeon</strong> (String) con valor default <code>"Aldric"</code>.</li>
                 <li>Crear variable <strong>Fuerza</strong> (Integer) con valor default <code>85</code>.</li>
                 <li>Crear variable <strong>Agilidad</strong> (Integer) con valor default <code>75</code>.</li>
                 <li>Crear variable <strong>Magia</strong> (Integer) con valor default <code>60</code>.</li>
                 <li>Crear variable <strong>Reputacion</strong> (Integer) con valor default <code>90</code>.</li>
-                <li>Crear variable <strong>EstaDescalificado</strong> (Boolean) con valor default <code>false</code>.</li>
+                <li>Crear variable <strong>EstaDescalificado</strong> (Boolean) con valor default <code>false</code>.
+                </li>
                 <li>
                   En el panel <em>My Blueprint</em>, sección <strong>Functions</strong>, clickeár el
                   <strong>+</strong> y nombrar la función <code>ObtenerCategoria</code>.
@@ -718,7 +1856,8 @@
                       directamente en el pin <em>Condition</em>:
                       <ul>
                         <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> =
-                          <code>"DESCALIFICADO"</code>.</li>
+                          <code>"DESCALIFICADO"</code>.
+                        </li>
                       </ul>
                     </li>
                     <li>
@@ -727,7 +1866,8 @@
                       <ul>
                         <li>Encadenar tres nodos <strong>AND</strong> conectando los cuatro comparadores <strong>&gt;=
                             (Integer)</strong> en secuencia.</li>
-                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> = <code>"LEGENDARIO"</code>.
+                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> =
+                          <code>"LEGENDARIO"</code>.
                         </li>
                       </ul>
                     </li>
@@ -735,31 +1875,43 @@
                       Rama <strong>FALSE</strong> → tercer <strong>Branch</strong> con condición
                       <code>(Fuerza &gt;= 75 AND Agilidad &gt;= 70) AND (Magia &gt;= 60 OR Reputacion &gt;= 80)</code>:
                       <ul>
-                        <li>Primer <strong>AND</strong>: <strong>Fuerza &gt;= 75</strong> y <strong>Agilidad &gt;= 70</strong>.</li>
-                        <li><strong>OR</strong>: <strong>Magia &gt;= 60</strong> y <strong>Reputacion &gt;= 80</strong>.</li>
-                        <li>Segundo <strong>AND</strong>: salida del primer <strong>AND</strong> y salida del <strong>OR</strong>.
+                        <li>Primer <strong>AND</strong>: <strong>Fuerza &gt;= 75</strong> y <strong>Agilidad &gt;=
+                            70</strong>.</li>
+                        <li><strong>OR</strong>: <strong>Magia &gt;= 60</strong> y <strong>Reputacion &gt;= 80</strong>.
                         </li>
-                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> = <code>"ORO"</code>.</li>
+                        <li>Segundo <strong>AND</strong>: salida del primer <strong>AND</strong> y salida del
+                          <strong>OR</strong>.
+                        </li>
+                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> =
+                          <code>"ORO"</code>.
+                        </li>
                       </ul>
                     </li>
                     <li>
                       Rama <strong>FALSE</strong> → cuarto <strong>Branch</strong> con condición
                       <code>(Fuerza &gt;= 60 OR Agilidad &gt;= 60) AND Reputacion &gt;= 50</code>:
                       <ul>
-                        <li><strong>OR</strong>: <strong>Fuerza &gt;= 60</strong> y <strong>Agilidad &gt;= 60</strong>.</li>
-                        <li><strong>AND</strong>: salida del <strong>OR</strong> y <strong>Reputacion &gt;= 50</strong>.</li>
-                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> = <code>"PLATA"</code>.</li>
+                        <li><strong>OR</strong>: <strong>Fuerza &gt;= 60</strong> y <strong>Agilidad &gt;= 60</strong>.
+                        </li>
+                        <li><strong>AND</strong>: salida del <strong>OR</strong> y <strong>Reputacion &gt;= 50</strong>.
+                        </li>
+                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> =
+                          <code>"PLATA"</code>.
+                        </li>
                       </ul>
                     </li>
                     <li>
                       Rama <strong>FALSE</strong> → quinto <strong>Branch</strong> con condición
                       <code>Fuerza &gt;= 40 OR Agilidad &gt;= 40 OR Magia &gt;= 40</code>:
                       <ul>
-                        <li>Encadenar dos nodos <strong>OR</strong> con los tres comparadores <strong>&gt;= (Integer)</strong>.</li>
-                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> = <code>"BRONCE"</code>.
+                        <li>Encadenar dos nodos <strong>OR</strong> con los tres comparadores <strong>&gt;=
+                            (Integer)</strong>.</li>
+                        <li><strong>TRUE</strong> → <strong>Return Node</strong> con <em>Categoria</em> =
+                          <code>"BRONCE"</code>.
                         </li>
                         <li><strong>FALSE</strong> → <strong>Return Node</strong> con <em>Categoria</em> =
-                          <code>"SIN CLASIFICAR"</code>.</li>
+                          <code>"SIN CLASIFICAR"</code>.
+                        </li>
                       </ul>
                     </li>
                   </ul>
@@ -784,8 +1936,11 @@
                   De la salida <em>Categoria</em> de la función, armar un <strong>Append</strong> en cadena:
                   <ul>
                     <li>Primer <strong>Append</strong>: pin A → <strong>GET NombreCampeon</strong>, pin B →
-                      <code>" → Categoría: "</code>.</li>
-                    <li>Segundo <strong>Append</strong>: pin A → salida del primer Append, pin B → salida <em>Categoria</em>.</li>
+                      <code>" → Categoría: "</code>.
+                    </li>
+                    <li>Segundo <strong>Append</strong>: pin A → salida del primer Append, pin B → salida
+                      <em>Categoria</em>.
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -795,12 +1950,8 @@
                 <li>Compilar, guardar, arrastrar a la escena y presionar <em>Play</em>.</li>
               </ol>
               <div class="img-frame img-frame--inline">
-                <img
-                  src="img/ejercicio-15/detalle.png"
-                  alt="Detalle Ejercicio 15"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-15/detalle.png" alt="Detalle Ejercicio 15" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">img/ejercicio-15/detalle.png</div>
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
@@ -812,23 +1963,15 @@
             <div class="panel__header">Gráfica Blueprint / Blueprint Editor</div>
             <div class="panel__body panel__body--blueprint">
               <div class="img-frame img-frame--large">
-                <img
-                  src="img/ejercicio-15/blueprint.png"
-                  alt="Blueprint Ejercicio 15"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-15/blueprint.png" alt="Blueprint Ejercicio 15" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">img/ejercicio-15/blueprint.png</div>
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
 
               <div class="img-frame img-frame--large">
-                <img
-                  src="img/ejercicio-15/funcion.png"
-                  alt="Función Ejercicio 15"
-                  class="img-frame__img"
-                  onerror="this.parentElement.classList.add('img-frame--missing')"
-                />
+                <img src="img/ejercicio-15/funcion.png" alt="Función Ejercicio 15" class="img-frame__img"
+                  onerror="this.parentElement.classList.add('img-frame--missing')" />
                 <div class="img-frame__missing-label">img/ejercicio-15/funcion.png</div>
                 <span class="img-frame__zoom-hint">🔍 Click para ampliar</span>
               </div>
@@ -857,4 +2000,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
